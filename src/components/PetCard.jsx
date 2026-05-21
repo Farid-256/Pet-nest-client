@@ -33,7 +33,7 @@ const PetCard = ({ animal }) => {
                         <p className="text-gray-500">{breed} • {species}</p>
                     </div>
                     <div className="text-right">
-                        <p className="text-2xl font-semibold text-orange-600">৳{adoptionFee}</p>
+                        <p className="text-2xl font-semibold text-orange-600">Taka {adoptionFee}</p>
                     </div>
                 </div>
 

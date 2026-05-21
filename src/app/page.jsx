@@ -14,7 +14,6 @@ export default async function Home() {
     <main>
       <Banner />
 
-      {/* Featured Pets Section */}
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-3">Available Pets</h2>

@@ -52,10 +52,7 @@ const AllPets = () => {
 
                 {
                     animals.map(animal => (
-                        <AllPetCard
-                            key={animal._id}
-                            animal={animal}
-                        />
+                        <AllPetCard key={animal._id} animal={animal}/>
                     ))
                 }
 
