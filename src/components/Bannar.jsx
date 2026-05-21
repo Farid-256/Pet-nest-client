@@ -1,25 +1,19 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { FaHeart, FaHome, FaPaw, FaStar } from "react-icons/fa";
+import Link from 'next/link'
+import Image from 'next/image'
+import { FaHeart, FaHome, FaPaw, FaStar } from "react-icons/fa"
 
 const Banner = () => {
     return (
         <div className="relative h-screen flex items-center justify-center overflow-hidden">
 
-            {/* Background Image */}
-            <Image
-                src='https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2070'
-                alt="Happy pets ready for adoption"
-                fill
-                className="object-cover"
-                priority
-                quality={85}
-            />
 
-            {/* Dark Overlay */}
+            <Image src='https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2070'
+                alt="Happy pets ready for adoption" fill className="object-cover" priority quality={85}/>
+
+
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
 
-            {/* Content */}
+
             <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
 
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2.5 rounded-full mb-6">
@@ -44,7 +38,6 @@ const Banner = () => {
                     </button>
                 </Link>
 
-                {/* Trust Signals */}
                 <div className="flex flex-wrap justify-center gap-6 md:gap-10 mt-16 text-white/80 text-sm md:text-base">
                     <div className="flex items-center gap-2">
                         <FaHeart className="text-red-400" />
@@ -62,7 +55,7 @@ const Banner = () => {
             </div>
             
         </div>
-    );
-};
+    )
+}
 
-export default Banner;
+export default Banner
