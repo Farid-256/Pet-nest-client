@@ -1,9 +1,7 @@
-"use client";
-
-
-import { authClient } from "@/app/lib/auth-client";
-import { AlertDialog, Button } from "@heroui/react";
-import { useRouter } from "next/navigation";
+"use client"
+import { authClient } from "@/app/lib/auth-client"
+import { AlertDialog, Button } from "@heroui/react"
+import { useRouter } from "next/navigation"
 
 export function Delete({ pet }) {
     const router = useRouter()
@@ -55,5 +53,5 @@ export function Delete({ pet }) {
                 </AlertDialog.Container>
             </AlertDialog.Backdrop>
         </AlertDialog>
-    );
+    )
 }
