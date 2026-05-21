@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"
 
 const WhyAdopt = () => {
     return (
@@ -33,4 +33,4 @@ const WhyAdopt = () => {
     );
 };
 
-export default WhyAdopt;
+export default WhyAdopt

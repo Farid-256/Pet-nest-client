@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"
 
 const SuccessStories = () => {
     const stories = [
@@ -39,4 +39,4 @@ const SuccessStories = () => {
     );
 };
 
-export default SuccessStories;
+export default SuccessStories
