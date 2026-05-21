@@ -12,7 +12,7 @@ const Register = () => {
         const formData = new FormData(e.target)
         const newUsers = Object.fromEntries(formData.entries())
 
-        // Confirm Password Check
+
         if (newUsers.password !== newUsers.confirmPassword) {
             toast.error("Password & Confirm Password must be same!")
             return;
@@ -29,7 +29,7 @@ const Register = () => {
 
         if (data) {
             toast.success('Account created successfully!')
-            window.location.href = '/login'
+            window.location.href = '/'
         } else if (error) {
             toast.error(error.message || "Registration failed")
         }
