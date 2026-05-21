@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# PetNest - Pet Adoption Platform
 
-First, run the development server:
+A full-stack pet adoption platform built with **Next.js 16** and **Express.js + MongoDB**. Users can browse pets, submit adoption requests, while pet owners can manage listings and handle requests.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Purpose
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+PetNest aims to create a simple, user-friendly, and transparent platform where people can adopt pets instead of buying them. It connects pet lovers with shelters and individual owners who want to find loving homes for their pets.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Live URL
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Beautiful & Responsive Design** – Fully responsive for mobile, tablet & desktop
+- **User Authentication** – Secure registration and login system
+- **Browse Pets** – Search and filter available pets
+- **Pet Details** – Detailed view with adoption form
+- **Adoption Request System** – Users can submit adoption requests
+- **Dashboard for Owners** – Manage listings, view requests, approve/reject
+- **My Listings** – Owners can add, edit, and delete their pets
+- **My Requests** – Users can track their adoption requests
+- **Admin-like Control** – Pet owners can approve/reject requests
+- **Toast Notifications** – Clean user feedback
+- **Image Support** – Support external image URLs (ImgBB, etc.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Frontend:**
+- Next.js 16 (App Router)
+- React
+- Tailwind CSS
+- HeroUI (Component Library)
+- React Toastify
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Backend:**
+- Express.js
+- MongoDB
+- Mongoose / MongoDB Driver
+- Better Auth (Authentication)
+
+**Other Tools:**
+- Vercel
+- Git & GitHub
+
+
+## NPM Packages Used
+
+# Frontend
+next
+tailwindcss
+@heroui/react
+react-toastify
+react-icons
+
+# Backend
+express
+cors
+dotenv
+mongodb
+better-auth
