@@ -18,7 +18,6 @@ const Dashboard = () => {
     return (
         <div className="flex min-h-screen bg-gray-100">
 
-            {/* Sidebar - Desktop + Mobile Slide */}
             <div className={`fixed md:static inset-y-0 left-0 z-50 w-72 bg-white border-r shadow-sm transform transition-transform duration-300 
                 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
 
@@ -39,7 +38,7 @@ const Dashboard = () => {
                             key={item.id}
                             onClick={() => {
                                 setActiveTab(item.id)
-                                setSidebarOpen(false)   // মোবাইলে ক্লিক করলে সাইডবার বন্ধ হবে
+                                setSidebarOpen(false) 
                             }}
                             className={`w-full text-left px-5 py-3 rounded-xl mb-1 transition-all text-lg
                                 ${activeTab === item.id
@@ -52,10 +51,10 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            {/* Main Content */}
+   
             <div className="flex-1 min-w-0">
 
-                {/* Mobile Top Bar */}
+  
                 <div className="md:hidden bg-white border-b px-6 py-4 flex items-center justify-between sticky top-0 z-40">
                     <h2 className="text-2xl font-bold text-gray-800">Dashboard</h2>
                     <button onClick={() => setSidebarOpen(true)}>
@@ -63,7 +62,6 @@ const Dashboard = () => {
                     </button>
                 </div>
 
-                {/* Content Area */}
                 <div className="p-4 md:p-8">
                     {activeTab === 'myListings' && <MyListings />}
                     {activeTab === 'addPet' && <AddPet />}
