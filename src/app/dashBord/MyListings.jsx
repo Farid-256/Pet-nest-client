@@ -1,56 +1,56 @@
 'use client';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { authClient } from "@/app/lib/auth-client";
-import RequestsModal from './RequestsModal';
-import { Edit } from '@/components/Edit';
-import { Delete } from '@/components/Delete';
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { authClient } from "@/app/lib/auth-client"
+import RequestsModal from './RequestsModal'
+import { Edit } from '@/components/Edit'
+import { Delete } from '@/components/Delete'
 
 const MyListings = () => {
-    const [pets, setPets] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [selectedPet, setSelectedPet] = useState(null);
-    const [showModal, setShowModal] = useState(false);
+    const [pets, setPets] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [selectedPet, setSelectedPet] = useState(null)
+    const [showModal, setShowModal] = useState(false)
 
-    const { data: session } = authClient.useSession();
-    const user = session?.user;
+    const { data: session } = authClient.useSession()
+    const user = session?.user
 
     useEffect(() => {
         if (user?.email) {
-            fetchMyPets();
+            fetchMyPets()
         }
-    }, [user]);
+    }, [user])
 
     const fetchMyPets = async () => {
-        const { data: tokenData } = await authClient.token();
+        const { data: tokenData } = await authClient.token()
 
         const res = await fetch(`http://localhost:5000/my-listings?email=${user.email}`, {
             headers: {
                 'content-type': 'application/json',
                 authorization: `Bearer ${tokenData?.token}`
             },
-        });
-        const data = await res.json();
-        setPets(data);
-        setLoading(false);
+        })
+        const data = await res.json()
+        setPets(data)
+        setLoading(false)
     };
 
     const openRequests = (pet) => {
-        setSelectedPet(pet);
-        setShowModal(true);
+        setSelectedPet(pet)
+        setShowModal(true)
     };
 
     if (loading) {
-        return <p className="text-center py-20 text-xl">Loading your pets...</p>;
+        return <p className="text-center py-20 text-xl">Loading your pets...</p>
     }
 
     return (
         <div className="px-4 md:px-6">
-            {/* Title */}
+    
             <h2 className="text-3xl font-bold mb-6">My Listings</h2>
 
-            {/* Stats */}
+      
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                 <div className="bg-white rounded-2xl shadow p-5 text-center border border-gray-100">
                     <p className="text-3xl font-bold text-gray-800">{pets.length}</p>
@@ -70,7 +70,6 @@ const MyListings = () => {
                 </div>
             </div>
 
-            {/* Pet Cards */}
             {pets.length === 0 ? (
                 <p className="text-center py-20 text-xl text-gray-500">
                     You have not added any pets yet.
@@ -92,7 +91,7 @@ const MyListings = () => {
                                 </div>
                                 <p className="text-orange-600 font-semibold mt-2">Taka {pet.adoptionFee}</p>
 
-                                {/* Buttons */}
+
                                 <div className="flex flex-col gap-2 mt-5">
                                     <Link href={`/allPets/${pet._id}`} className="w-full">
                                         <button className="w-full py-2.5 bg-gray-100 hover:bg-gray-200 rounded-xl text-sm font-medium">
@@ -120,7 +119,7 @@ const MyListings = () => {
                 </div>
             )}
 
-            {/* Requests Modal */}
+
             {showModal && selectedPet && (
                 <RequestsModal
                     pet={selectedPet}
@@ -128,7 +127,7 @@ const MyListings = () => {
                 />
             )}
         </div>
-    );
-};
+    )
+}
 
 export default MyListings;
