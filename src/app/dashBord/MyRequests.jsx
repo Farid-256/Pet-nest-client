@@ -1,21 +1,21 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
-import { authClient } from "@/app/lib/auth-client";
-import Link from 'next/link';
+import { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
+import { authClient } from "@/app/lib/auth-client"
+import Link from 'next/link'
 
 const MyRequests = () => {
-    const [requests, setRequests] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [requests, setRequests] = useState([])
+    const [loading, setLoading] = useState(true)
 
-    const { data: session } = authClient.useSession();
-    const user = session?.user;
+    const { data: session } = authClient.useSession()
+    const user = session?.user
 
     useEffect(() => {
         if (user?.email) {
-            fetchMyRequests();
+            fetchMyRequests()
         }
-    }, [user]);
+    }, [user])
 
     const fetchMyRequests = async () => {
         try {
@@ -27,17 +27,16 @@ const MyRequests = () => {
                     authorization: `Bearer ${tokenData?.token}`
                 },
             });
-            const data = await res.json();
-            setRequests(data);
+            const data = await res.json()
+            setRequests(data)
         } catch (error) {
-            console.error(error);
-            toast.error("Failed to load your requests");
+            console.error(error)
+            toast.error("Failed to load your requests")
         } finally {
-            setLoading(false);
+            setLoading(false)
         }
     };
 
-    // Cancel / Delete Request
     const cancelRequest = async (requestId) => {
         if (!confirm("Are you sure you want to cancel this request?")) return;
 
@@ -108,12 +107,11 @@ const MyRequests = () => {
                                     </button>
                                 </Link>
 
-                                {/* Cancel Button - Only for Pending */}
+
                                 {req.status === 'pending' && (
-                                    <button
-                                        onClick={() => cancelRequest(req._id)}
-                                        className="px-5 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl text-sm font-medium"
-                                    >
+                                    <button onClick={() => cancelRequest(req._id)}
+                                        className="px-5 py-2 bg-red-600 hover:bg-red-700
+                                        text-white rounded-xl text-sm font-medium">
                                         Cancel
                                     </button>
                                 )}
@@ -123,7 +121,7 @@ const MyRequests = () => {
                 </div>
             )}
         </div>
-    );
-};
+    )
+}
 
-export default MyRequests;
+export default MyRequests
