@@ -51,7 +51,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Contact & Social */}
+   
                     <div className='flex flex-col space-y-5'>
                         <h3 className="text-lg font-semibold text-white">Get in Touch</h3>
 
