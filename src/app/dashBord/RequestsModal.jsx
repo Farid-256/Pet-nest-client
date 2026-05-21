@@ -1,11 +1,11 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
-import { authClient } from '../lib/auth-client';
+'use client'
+import { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
+import { authClient } from '../lib/auth-client'
 
 const RequestsModal = ({ pet, onClose }) => {
-    const [requests, setRequests] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [requests, setRequests] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         fetchRequests();
