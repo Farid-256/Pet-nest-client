@@ -9,7 +9,7 @@ A full-stack pet adoption platform built with **Next.js 16** and **Express.js + 
 PetNest aims to create a simple, user-friendly, and transparent platform where people can adopt pets instead of buying them. It connects pet lovers with shelters and individual owners who want to find loving homes for their pets.
 
 
-## Live URL
+## Live URL - https://adopt-me-chi-ten.vercel.app
 
 ## Features
 

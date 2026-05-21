@@ -160,5 +160,5 @@ export function Edit({ pet }) {
                 </Modal.Container>
             </Modal.Backdrop>
         </Modal>
-    );
+    )
 }
