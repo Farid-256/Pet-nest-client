@@ -17,7 +17,7 @@ const Banner = () => {
             <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
 
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2.5 rounded-full mb-6">
-                    <span className="text-yellow-400">❤️</span>
+                    <span className="text-yellow-400"> <FaHeart /> </span>
                     <span className="text-sm font-medium text-white tracking-wider">FIND YOUR FOREVER FRIEND</span>
                 </div>
 
