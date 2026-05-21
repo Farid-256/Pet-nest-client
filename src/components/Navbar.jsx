@@ -1,11 +1,11 @@
 'use client'
-import { authClient } from "@/app/lib/auth-client";
-import { Avatar } from "@heroui/react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { authClient } from "@/app/lib/auth-client"
+import { Avatar } from "@heroui/react"
+import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
 
 const Navbar = () => {
     const pathName = usePathname();
@@ -16,9 +16,9 @@ const Navbar = () => {
     const user = session?.user;
 
     const handleLogout = async () => {
-        await authClient.signOut();
-        window.location.href = '/';
-        setMobileMenuOpen(false);
+        await authClient.signOut()
+        window.location.href = '/'
+        setMobileMenuOpen(false)
     };
 
     return (
@@ -26,13 +26,12 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-6 py-5">
                 <div className="flex justify-between items-center">
 
-                    {/* Logo */}
                     <div className="flex items-center gap-2">
                         <Image className="rounded-full" src='/assets/navlogo.jpg' height={60} width={60} alt="logo" />
                         <h1 className="text-3xl font-bold text-fuchsia-500">Pet<span className="text-orange-500">Nest</span></h1>
                     </div>
 
-                    {/* Desktop Navigation */}
+
                     <div className="hidden md:flex items-center gap-10">
                         <Link href="/" className={pathName === '/' ? 'text-xl text-gray-500 border-b-3 border-blue-700' : 'text-xl text-gray-500'}>
                             Home
@@ -42,7 +41,6 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    {/* Right Side */}
                     <div className="flex items-center gap-4">
                         {user ? (
                             <div className="relative">
@@ -76,17 +74,13 @@ const Navbar = () => {
                             </Link>
                         )}
 
-                        {/* Mobile Menu Button */}
-                        <button
-                            className="md:hidden"
-                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        >
+   
+                        <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
                     </div>
                 </div>
 
-                {/* Mobile Menu */}
                 {mobileMenuOpen && (
                     <div className="md:hidden mt-6 py-6 border-t">
                         <div className="flex flex-col gap-6 text-lg">
@@ -101,7 +95,7 @@ const Navbar = () => {
                 )}
             </div>
         </nav>
-    );
-};
+    )
+}
 
-export default Navbar;
+export default Navbar
