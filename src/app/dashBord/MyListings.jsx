@@ -25,7 +25,7 @@ const MyListings = () => {
     const fetchMyPets = async () => {
         const { data: tokenData } = await authClient.token()
 
-        const res = await fetch(`http://localhost:5000/my-listings?email=${user.email}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/my-listings?email=${user.email}`, {
             headers: {
                 'content-type': 'application/json',
                 authorization: `Bearer ${tokenData?.token}`

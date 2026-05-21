@@ -17,11 +17,12 @@ const MyRequests = () => {
         }
     }, [user])
 
+
     const fetchMyRequests = async () => {
         try {
             const { data: tokenData } = await authClient.token()
             
-            const res = await fetch(`http://localhost:5000/my-requests?email=${user.email}`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/my-requests?email=${user.email}`, {
                 headers: {
                     'content-type': 'application/json',
                     authorization: `Bearer ${tokenData?.token}`
@@ -42,7 +43,7 @@ const MyRequests = () => {
 
         try {
             const { data: tokenData } = await authClient.token();
-            const res = await fetch(`http://localhost:5000/adoptions/${requestId}`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/adoptions/${requestId}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${tokenData?.token}`

@@ -24,7 +24,7 @@ export function Edit({ pet }) {
         newPet.ownerName = user?.name;
 
         const { data: tokenData } = await authClient.token()
-        const res = await fetch(`http://localhost:5000/animals/${pet._id}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/animals/${pet._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

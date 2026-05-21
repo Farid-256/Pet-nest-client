@@ -50,7 +50,7 @@ const AdoptForm = ({ animal }) => {
 
         try {
             const { data: tokenData } = await authClient.token()
-            const res = await fetch('http://localhost:5000/adoptions', {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/adoptions`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -62,7 +62,7 @@ const AdoptForm = ({ animal }) => {
             const data = await res.json();
 
             if (data.insertedId) {
-                toast.success("Adoption request sent successfully! ✅");
+                toast.success("Adoption request sent successfully!");
                 setAdoptDate('');
                 setMessage('');
             } else {

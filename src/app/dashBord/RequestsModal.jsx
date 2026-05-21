@@ -13,7 +13,7 @@ const RequestsModal = ({ pet, onClose }) => {
 
     const fetchRequests = async () => {
         try {
-            const res = await fetch(`http://localhost:5000/requests/${pet._id}`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/requests/${pet._id}`);
             const data = await res.json();
             setRequests(data);
         } catch (error) {
@@ -26,7 +26,7 @@ const RequestsModal = ({ pet, onClose }) => {
     const handleApprove = async (requestId) => {
         try {
             const { data: tokenData } = await authClient.token();
-            const res = await fetch(`http://localhost:5000/requests/approve/${requestId}`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/requests/approve/${requestId}`, {
                 method: 'PATCH',
                 headers: {
                     authorization: `Bearer ${tokenData?.token}`
@@ -46,7 +46,7 @@ const RequestsModal = ({ pet, onClose }) => {
     const handleReject = async (requestId) => {
         try {
             const { data: tokenData } = await authClient.token();
-            const res = await fetch(`http://localhost:5000/requests/reject/${requestId}`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/requests/reject/${requestId}`, {
                 method: 'PATCH',
                 headers: {
                     authorization: `Bearer ${tokenData?.token}`
