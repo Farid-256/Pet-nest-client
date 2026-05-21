@@ -36,7 +36,7 @@ const HappyAdopters = () => {
         <section className="py-16 px-6 bg-orange-50">
             <div className="max-w-6xl mx-auto">
 
-                {/* Header */}
+   
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-gray-800">Happy Adopters</h2>
                     <p className="text-gray-500 mt-3 max-w-xl mx-auto">
@@ -45,22 +45,21 @@ const HappyAdopters = () => {
                     </p>
                 </div>
 
-                {/* Cards */}
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {adopters.map(adopter => (
                         <div key={adopter.id} className="bg-white rounded-3xl p-6 shadow-md hover:shadow-xl transition">
 
-                            {/* Stars */}
+        
                             <div className="text-orange-400 text-lg mb-4">
                                 {'⭐'.repeat(adopter.rating)}
                             </div>
 
-                            {/* Message */}
                             <p className="text-gray-500 text-sm leading-relaxed mb-6">
                                 {adopter.message}
                             </p>
 
-                            {/* User Info */}
+
                             <div className="flex items-center gap-3 border-t pt-4">
                                 <span className="text-4xl">{adopter.avatar}</span>
                                 <div>
