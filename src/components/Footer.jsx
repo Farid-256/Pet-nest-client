@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaPhoneAlt, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { FaRegCopyright, FaHeart } from "react-icons/fa";
@@ -52,21 +52,31 @@ const Footer = () => {
                     </div>
 
                     {/* Contact & Social */}
-                    <div>
-                        <h3 className="text-lg font-semibold text-white mb-5">Get in Touch</h3>
+                    <div className='flex flex-col space-y-5'>
+                        <h3 className="text-lg font-semibold text-white">Get in Touch</h3>
 
-                        <p className="mb-2 flex items-center gap-2">
-                            <MdLocationOn /> Dhaka, Bangladesh
-                        </p>
-                        <p className="mb-6 flex items-center gap-2">
-                            <IoMdMail /> hello@petnest.com
-                        </p>
+                        <div className='space-y-2'>
+                            <p className="flex items-center gap-2">
+                                <MdLocationOn /> Dhaka, Bangladesh
+                            </p>
+
+                            <p className="flex items-center gap-2">
+                                <IoMdMail /> faridiqubal34fx@gmail.com
+                            </p>
+
+                            <p className="flex items-center gap-2">
+                                <FaPhoneAlt /> +88 01992-811801
+                            </p>
+                        </div>
 
                         <div className="flex gap-5 text-2xl">
-                            <a href="#" target="_blank" className="hover:text-white transition"><FaFacebookF /></a>
-                            <a href="#" target="_blank" className="hover:text-white transition"><FaInstagram /></a>
-                            <a href="#" target="_blank" className="hover:text-white transition"><FaTwitter /></a>
-                            <a href="#" target="_blank" className="hover:text-white transition"><FaYoutube /></a>
+                            <a href="https://www.facebook.com" target="_blank" className="hover:text-white transition"><FaFacebookF /></a>
+
+                            <a href="https://www.instagram.com" target="_blank" className="hover:text-white transition"><FaInstagram /></a>
+
+                            <a href="https://www.facebook.com/" target="_blank" className="hover:text-white transition"><FaTwitter /></a>
+
+                            <a href="https://www.youtube.com/" target="_blank" className="hover:text-white transition"><FaYoutube /></a>
                         </div>
                     </div>
                 </div>

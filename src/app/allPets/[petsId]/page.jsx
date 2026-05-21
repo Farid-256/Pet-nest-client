@@ -12,7 +12,6 @@ const PetsDetailsPage = async ({ params }) => {
     return (
         <section className="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12 space-y-8 md:space-y-12">
 
-            {/* Top Image Section */}
             <div className="relative h-72 md:h-80 lg:h-96 rounded-3xl overflow-hidden shadow-xl">
                 <Image src={image} alt={name} fill className="object-cover" priority/>
 
