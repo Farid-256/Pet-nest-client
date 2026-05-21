@@ -101,7 +101,8 @@ const MyListings = () => {
 
                                     <div className="grid grid-cols-2 gap-2">
                                         <button onClick={() => openRequests(pet)}
-                                            className="py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-sm font-medium">
+                                            className="py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl text-sm 
+                                            font-medium">
                                             Requests
                                         </button>
 
