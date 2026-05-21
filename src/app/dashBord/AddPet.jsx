@@ -65,7 +65,7 @@ const AddPet = () => {
                                     </TextField>
 
                                     <div className="grid grid-cols-2 gap-4">
-                                        {/* Species Select */}
+
                                         <TextField isRequired name="species">
                                             <Label>Species</Label>
                                             <Input placeholder="Dog / Cat / Bird / Rabbit / etc" />
@@ -83,7 +83,6 @@ const AddPet = () => {
                                             <Input type="number" placeholder="2" />
                                         </TextField>
 
-                                        {/* Gender Select */}
                                         <TextField isRequired name="gender">
                                             <Label>Gender</Label>
                                             <Input placeholder="Male / Female" />
