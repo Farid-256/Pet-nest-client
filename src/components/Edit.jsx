@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { authClient } from "@/app/lib/auth-client";
 import { Button, Input, Label, Modal, Surface, TextArea, TextField } from "@heroui/react";
@@ -151,15 +151,10 @@ export function Edit({ pet }) {
                                             Save
                                         </Button>
                                     </Modal.Footer>
-
-
-
                                 </form>
 
                             </Surface>
                         </Modal.Body>
-
-
 
                     </Modal.Dialog>
                 </Modal.Container>
