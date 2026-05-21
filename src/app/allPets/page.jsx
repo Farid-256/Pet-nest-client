@@ -1,15 +1,15 @@
 'use client'
 
-import { useEffect, useState } from "react";
-import AllPetCard from "@/components/AllPetCard";
+import { useEffect, useState } from "react"
+import AllPetCard from "@/components/AllPetCard"
 
 const AllPets = () => {
 
-    const [animals, setAnimals] = useState([]);
+    const [animals, setAnimals] = useState([])
 
-    const [search, setSearch] = useState('');
-    const [species, setSpecies] = useState('');
-    const [sort, setSort] = useState('');
+    const [search, setSearch] = useState('')
+    const [species, setSpecies] = useState('')
+    const [sort, setSort] = useState('')
 
     useEffect(() => {
 
